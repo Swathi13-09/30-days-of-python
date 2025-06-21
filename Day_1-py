@@ -1,0 +1,32 @@
+# 📅 Day 1 – Introduction to Python 🐍
+
+## 🧠 What is Python?
+
+> Python is a **high-level**, **interpreted**, **dynamically typed**, and **multi-paradigm** programming language.  
+It supports:
+- **Procedural Programming**
+- **Object-Oriented Programming (OOP)**
+- **Functional Programming**
+
+Originally created by **Guido van Rossum** in the late 1980s, Python is now one of the most widely used languages in data science, AI, web development, automation, and scripting.
+
+---
+
+## 🔍 Key Features
+
+| Feature              | Description                                                             |
+|----------------------|-------------------------------------------------------------------------|
+| Easy Syntax          | Readable like English – reduces learning curve                          |
+| Interpreted          | Executes line-by-line, no compilation needed                            |
+| Dynamically Typed    | No need to declare data types                                           |
+| Extensive Libraries  | Includes `NumPy`, `Pandas`, `TensorFlow`, `Flask`, and many more        |
+| Cross-Platform       | Works on Windows, macOS, Linux                                           |
+
+---
+
+## ⚙️ Environment Setup
+
+- 📥 Install from: [https://www.python.org/downloads](https://www.python.org/downloads)
+- 🧪 Verify Installation:
+```bash
+python --version
