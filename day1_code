@@ -1,0 +1,30 @@
+# Student Profile Builder
+
+print("👩‍🎓 Welcome to the Student Profile Creator 👨‍🎓")
+print("Please enter the following details:\n")
+
+# Inputs
+name = input("Enter your full name: ")
+age = input("Enter your age: ")
+
+# 🔁 Bonus: Type conversion + validation
+try:
+    age = int(age)
+    print(f"Your age is recorded as: {age}")
+except ValueError:
+    print("⚠️ Please enter a valid number for age.")
+dept = input("Enter your department: ")
+college = input("Enter your college name: ")
+year = input("Enter your year of study: ")
+is_hosteler = input("Are you a hosteler? (yes/no): ")
+
+# Display with formatting
+print("\n🎓--- Student Profile ---🎓")
+print(f"Name        : {name}")
+print(f"Age         : {age}")
+print(f"Department  : {dept}")
+print(f"College     : {college}")
+print(f"Year        : {year}")
+print(f"Hosteler    : {is_hosteler.capitalize()}")
+
+print("\n✅ Profile successfully created!")
