@@ -1,0 +1,49 @@
+# 📅 Day 2 – Exception Handling in Python 🚨
+
+## 🔍 What is Exception Handling?
+
+**Exception Handling** is a technique used to **detect, handle, and respond to runtime errors** in a program without crashing it.
+
+When an exception (error) occurs during program execution, Python **stops the normal flow** and jumps to the **`except` block** (if present) to manage the error gracefully.
+
+---
+
+## 🎯 Why Is It Used?
+
+- ✅ To **prevent crashes**
+- ✅ To provide **user-friendly messages**
+- ✅ To help the developer **debug easily**
+- ✅ To **ensure smooth program flow**, even when something goes wrong
+- ✅ To maintain **professional and safe applications**
+
+---
+
+## 🧠 Basic Syntax
+
+```python
+try:
+    # Code that might throw an error
+except SomeError:
+    # Code to handle the error
+else:
+    # Executes if no error occurs
+finally:
+    # Always runs, used for cleanup/logs
+🛠️ Common Exceptions
+
+Error	When It Happens
+ValueError :	When input is not the expected type (e.g. int("abc"))
+ZeroDivisionError :	When dividing by zero
+TypeError :	Wrong data type used in an operation
+IndexError : Accessing an invalid list index
+FileNotFoundError : File you're trying to open doesn't exist
+
+🏢 Use in Company-Based Projects
+
+| Use Case                       | How Exception Handling Helps                          |
+| ------------------------------ | ----------------------------------------------------- |
+| Login system                   | Show "Invalid input" instead of crashing              |
+| File uploads                   | Handle missing or unsupported file types              |
+| Payment gateway                | Catch transaction failures and show safe messages     |
+| ATM software                   | Handle invalid amounts, card errors, and zero balance |
+| API / Internet request failure | Retry or log issue instead of app shutdown            |
