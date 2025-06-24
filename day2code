@@ -1,0 +1,84 @@
+# Mini Project: Bank ATM Simulation with PIN Protection
+
+
+print("🏦 Welcome to Swathi's Bank ATM\n")
+
+
+# Initial Setup
+
+balance = 5000
+correct_pin = input("🔑 Set a 4-digit ATM PIN for your account: ")
+
+print("\n✅ PIN has been set successfully!\n")
+
+# Menu Display
+
+try:
+    print("Choose an option:")
+    print("1. View Balance")
+    print("2. Withdraw Money")
+    print("3. Deposit Money")
+
+    choice = int(input("Enter your choice (1/2/3): "))
+
+# View Balance
+ 
+    if choice == 1:
+        print(f"💰 Your balance is ₹{balance}")
+
+
+# Withdraw Money
+  
+    elif choice == 2:
+        attempts = 3
+        while attempts > 0:
+            entered_pin = input("🔒 Enter your ATM PIN to proceed: ")
+            if entered_pin == correct_pin:
+                amount = int(input("Enter amount to withdraw: ₹"))
+                if amount <= 0:
+                    raise ValueError("Amount must be greater than zero.")
+                if amount > balance:
+                    raise Exception("Insufficient funds.")
+                balance -= amount
+                print(f"✅ Withdrawal successful. New balance: ₹{balance}")
+                break
+            else:
+                attempts -= 1
+                print(f"❌ Incorrect PIN. Attempts left: {attempts}")
+        else:
+            print("🚫 Transaction blocked due to 3 wrong PIN attempts.")
+
+   
+  # Deposit Money
+    
+    elif choice == 3:
+        attempts = 3
+        while attempts > 0:
+            entered_pin = input("🔒 Enter your ATM PIN to proceed: ")
+            if entered_pin == correct_pin:
+                amount = int(input("Enter amount to deposit: ₹"))
+                if amount <= 0:
+                    raise ValueError("Deposit amount must be positive.")
+                balance += amount
+                print(f"✅ Deposit successful. New balance: ₹{balance}")
+                break
+            else:
+                attempts -= 1
+                print(f"❌ Incorrect PIN. Attempts left: {attempts}")
+        else:
+            print("🚫 Transaction blocked due to 3 wrong PIN attempts.")
+
+    else:
+        print("❌ Invalid option selected.")
+
+
+# Exception Handling
+
+except ValueError as ve:
+    print(f"⚠️ Value Error: {ve}")
+
+except Exception as e:
+    print(f"🚫 Error: {e}")
+
+finally:
+    print("🔒 Thank you for using Swathi's ATM. Please collect your card.\n")
