@@ -1,0 +1,85 @@
+# Day 3: Variables & Data Types – 5 Mini Projects
+
+
+print("🎯 Welcome to Day 3 - Python Mini Projects 🎯")
+print("Choose a project to run:")
+print("1. BMI Calculator")
+print("2. Simple Interest Calculator")
+print("3. Temperature Converter")
+print("4. Bill Splitter")
+print("5. Age in Days Calculator\n")
+
+choice = input("Enter your choice (1-5): ")
+
+# 1️⃣ BMI CALCULATOR
+if choice == "1":
+    print("\n🧍‍♀️ BMI (Body Mass Index) Calculator\n")
+    weight = float(input("Enter your weight in kg: "))
+    height = float(input("Enter your height in meters: "))
+    bmi = weight / (height ** 2)
+    print(f"🧮 Your BMI is: {bmi:.2f}")
+    if bmi < 18.5:
+        print("🔸 You are underweight.")
+    elif 18.5 <= bmi < 25:
+        print("✅ You have a normal weight.")
+    elif 25 <= bmi < 30:
+        print("⚠️ You are overweight.")
+    else:
+        print("🚨 You are obese.")
+
+# 2️⃣ SIMPLE INTEREST CALCULATOR
+elif choice == "2":
+    print("\n🏦 Simple Interest Calculator\n")
+    principal = float(input("Enter Principal Amount (₹): "))
+    rate = float(input("Enter Interest Rate (%): "))
+    time = int(input("Enter Time (in years): "))
+    si = (principal * rate * time) / 100
+    print(f"💰 Simple Interest = ₹{si:.2f}")
+    print(f"📈 Total Amount = ₹{principal + si:.2f}")
+
+# 3️⃣ TEMPERATURE CONVERTER
+elif choice == "3":
+    print("\n🌡️ Temperature Converter\n")
+    unit = input("Convert to (C/F): ").upper()
+    if unit == "C":
+        f = float(input("Enter temperature in Fahrenheit: "))
+        c = (f - 32) * 5/9
+        print(f"🌡️ {f}°F = {c:.2f}°C")
+    elif unit == "F":
+        c = float(input("Enter temperature in Celsius: "))
+        f = (c * 9/5) + 32
+        print(f"🌡️ {c}°C = {f:.2f}°F")
+    else:
+        print("❌ Invalid choice. Use C or F.")
+
+# 4️⃣ BILL SPLITTER
+elif choice == "4":
+    print("\n🍽️ Dinner Bill Splitter\n")
+    total = float(input("Enter total bill amount (₹): "))
+    friends = int(input("How many friends to split with: "))
+    share = total / friends
+    print(f"💸 Each friend should pay: ₹{share:.2f}")
+# 5️⃣ AGE IN DAYS CALCULATOR (Based on Year Only)
+elif choice == "5":
+    from datetime import date
+
+    print("\n📆 Age Calculator (from Year Only)\n")
+
+    birth_year = int(input("Enter your birth year (e.g., 2003): "))
+
+    # Assume Jan 1st of birth year
+    dob = date(birth_year, 1, 1)
+    today = date.today()
+
+    # Calculate age in days
+    age_in_days = (today - dob).days
+
+    # Calculate approximate years
+    age_years = today.year - birth_year
+
+    print(f"📅 You were born in: {birth_year}")
+    print(f"🧓 You are approximately {age_years} years old.")
+    print(f"🗓️ That's about {age_in_days} days since your birth.")
+
+
+
