@@ -1,0 +1,71 @@
+🔢 What is a Variable in Python?
+A variable is a named container used to store data in a program.
+It acts like a label attached to a value so you can use or modify that value later.
+
+✅ Syntax:
+
+variable_name = value
+
+💡 Example:
+
+name = "Swathi"
+age = 21
+name is storing a string, and age is storing an integer.
+
+🧬 What are Data Types in Python?
+A data type tells Python what kind of value is being stored in a variable — like a number, text, list, etc.
+
+Python is dynamically typed, so you don’t need to declare the data type explicitly. Python figures it out automatically.
+
+🧠 Common Data Types in Python
+
+| Data Type | Description                    | Example                                   |
+| --------- | ------------------------------ | ----------------------------------------- |
+| `int`     | Integer (whole numbers)        | `age = 25`                                |
+| `float`   | Decimal numbers                | `height = 5.6`                            |
+| `str`     | String (text)                  | `name = "Swathi"`                         |
+| `bool`    | Boolean (True/False)           | `is_student = True`                       |
+| `list`    | Collection of values (ordered) | `fruits = ["apple", "mango"]`             |
+| `tuple`   | Ordered, immutable collection  | `coordinates = (10, 20)`                  |
+| `dict`    | Key-value pairs                | `profile = {"name": "Swathi", "age": 21}` |
+| `set`     | Unordered, unique values       | `colors = {"red", "blue"}`                |
+
+🔧 Why Variables and Data Types are Important
+
+| 🔍 Purpose                        | ✅ Use in Code/Real-world Example   |
+| --------------------------------- | ---------------------------------- |
+| Store user input                  | `username = input("Enter name: ")` |
+| Perform calculations              | `total = price * quantity`         |
+| Make decisions (with `if`/`else`) | `if is_member: apply_discount()`   |
+| Handle large data (lists/dicts)   | `students = ["A", "B", "C"]`       |
+| Build dynamic systems             | APIs, dashboards, chatbots, etc.   |
+
+🎯 Summary
+
+Variables: Used to label and store data.
+
+Data Types: Define the nature of data.
+
+Python is dynamically typed, so you can change a variable’s value or type easily.
+
+Used everywhere: calculations, forms, data handling, projects, and more.
+
+REAL TIME APPLICATION
+
+2. 🧑‍💻 User Profile Management in Web Apps
+Use:
+
+Store user data, preferences, login status
+
+username = "swathi123"
+is_logged_in = True
+followers = 1050
+bio = "Tech enthusiast and Python learner"
+
+🔐 Used in websites like Instagram, LinkedIn, etc.
+
+
+
+
+
+
