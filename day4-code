@@ -1,0 +1,81 @@
+# 💼 Employee Record Management System
+# Author: Swathi G
+
+print("👩‍💼 Welcome to the Employee Management System 👨‍💼\n")
+
+# Master list to store all employee records
+employee_db = []
+
+def add_employee():
+    print("\n➕ Add New Employee")
+    emp_id = input("Enter Employee ID: ")
+    name = input("Enter Full Name: ")
+    role = input("Enter Role/Designation: ")
+    salary = float(input("Enter Salary (₹): "))
+    
+    # Tuple used to store joining date (fixed)
+    joining_date = (
+        int(input("Enter Joining Day (DD): ")),
+        int(input("Enter Joining Month (MM): ")),
+        int(input("Enter Joining Year (YYYY): "))
+    )
+    
+    # Dictionary to hold employee details
+    employee = {
+        "id": emp_id,
+        "name": name,
+        "role": role,
+        "salary": salary,
+        "joining_date": joining_date
+    }
+    
+    employee_db.append(employee)
+    print("✅ Employee added successfully!\n")
+
+def search_employee():
+    print("\n🔍 Search Employee")
+    emp_id = input("Enter Employee ID to search: ")
+    
+    found = False
+    for emp in employee_db:
+        if emp["id"] == emp_id:
+            print("\n📄 Employee Details:")
+            print(f"ID           : {emp['id']}")
+            print(f"Name         : {emp['name']}")
+            print(f"Role         : {emp['role']}")
+            print(f"Salary       : ₹{emp['salary']:.2f}")
+            print(f"Joining Date : {emp['joining_date'][0]}-{emp['joining_date'][1]}-{emp['joining_date'][2]}")
+            found = True
+            break
+    if not found:
+        print("❌ Employee not found.\n")
+
+def display_all():
+    print("\n📋 All Employee Records")
+    if not employee_db:
+        print("⚠️ No records available.")
+        return
+    for emp in employee_db:
+        print("-" * 40)
+        print(f"ID: {emp['id']} | Name: {emp['name']} | Role: {emp['role']} | Salary: ₹{emp['salary']}")
+
+while True:
+    print("\n🔧 MENU:")
+    print("1. Add Employee")
+    print("2. Search Employee by ID")
+    print("3. Display All Employees")
+    print("4. Exit")
+
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == "1":
+        add_employee()
+    elif choice == "2":
+        search_employee()
+    elif choice == "3":
+        display_all()
+    elif choice == "4":
+        print("🔒 Exiting... Thank you!")
+        break
+    else:
+        print("❗ Invalid choice. Please try again.")
