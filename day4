@@ -1,0 +1,76 @@
+📘 Day 4: Python Collections – List, Tuple, Dictionary
+Python offers powerful built-in data structures for handling collections of data. The most commonly used are:
+
+List – ordered, mutable
+
+Tuple – ordered, immutable
+
+Dictionary – unordered (from Python 3.7+, it maintains insertion order), key-value pairs
+
+🧾 1. LISTS – Dynamic & Ordered
+🔹 What is a List?
+A list is a collection of items stored in a single variable.
+
+Items are ordered, indexed, and mutable (can be changed)
+
+fruits = ["apple", "banana", "cherry"]
+
+🔹 Common Operations
+fruits.append("orange")         # Add to end
+fruits.insert(1, "grape")       # Add at index 1
+fruits.remove("banana")         # Remove by value
+del fruits[2]                   # Delete by index
+print(fruits[0])                # Access first element
+
+🔹 Real-World Use:
+In a shopping cart system (e.g., Amazon), all the product IDs in a customer’s cart can be stored in a list.
+cart_items = ["P101", "P203", "P305"]
+
+ 2. TUPLES – Fixed & Ordered
+🔹 What is a Tuple?
+A tuple is similar to a list but immutable (cannot change its values after creation).
+
+Used for storing fixed data.
+
+location = ("Chennai", 13.0827, 80.2707)
+
+🔹 Key Features
+Faster than lists
+
+Can be used as keys in dictionaries (only if they contain immutable values)
+
+🔹 Real-World Use:
+Storing GPS coordinates, birth date, or database schema fields.
+
+date_of_birth = (1999, 6, 15)  # (year, month, day)
+
+🔹 Accessing Tuple Elements:
+print(location[0])  # Chennai
+⚠️ You cannot do: location[0] = "Delhi" → ❌ This will raise an error.
+
+🧾 3. DICTIONARIES – Key:Value Mapping
+🔹 What is a Dictionary?
+A collection of key-value pairs
+
+Each key maps to a value
+
+Unordered before Python 3.7, insertion-ordered from Python 3.7
+student = {
+    "name": "Swathi",
+    "age": 21,
+    "department": "CSE"
+}
+🔹 Common Operations:
+
+print(student["name"])        # Access value
+student["year"] = 3           # Add new key-value
+student["age"] = 22           # Update value
+del student["department"]     # Delete a key
+
+💼 Real-Time Use Case Summary
+
+| Collection | Used For                              | Real-Time Example                               |
+| ---------- | ------------------------------------- | ----------------------------------------------- |
+| `list`     | Dynamic group of related values       | Items in cart, task list, names, logs           |
+| `tuple`    | Fixed, constant values                | Coordinates, DOB, DB schemas                    |
+| `dict`     | Structured data, fast lookup via keys | User info, configs, response from server (JSON) |
