@@ -1,0 +1,64 @@
+🎯 Objective:
+
+Build a program that takes multiple employees' attendance & work hours, then:
+
+Calculates daily wages
+
+Applies salary deductions for less work hours
+
+Tracks absentees
+
+Generates a summary report
+
+💻 Tech Covered:
+
+if, elif, else
+
+for & while loops
+
+break, continue
+
+Nested structures
+
+
+PROGRAM
+
+
+print("🏢 Welcome to HR Attendance & Salary System\n")
+
+num_employees = int(input("Enter number of employees to process: "))
+hourly_rate = 100  # ₹100 per hour
+
+absentees = []
+total_paid = 0
+
+for i in range(num_employees):
+    name = input(f"\n👤 Enter employee {i+1} name: ")
+    present = input("🟢 Present today? (yes/no): ").lower()
+
+    if present == "no":
+        print(f"❌ {name} is marked absent.")
+        absentees.append(name)
+        continue  # skip rest and go to next employee
+
+    hours_worked = float(input("⏱️ Enter hours worked today: "))
+
+    if hours_worked < 4:
+        print(f"⚠️ {name} worked less than half-day. No salary paid.")
+        continue
+
+    if 4 <= hours_worked < 8:
+        salary = hourly_rate * hours_worked * 0.8  # 20% deduction
+        print(f"💰 {name}'s partial salary with deduction: ₹{salary:.2f}")
+    else:
+        salary = hourly_rate * hours_worked
+        print(f"✅ {name}'s full salary: ₹{salary:.2f}")
+
+    total_paid += salary
+
+# Final Report
+print("\n📊 --- Daily HR Report --- 📊")
+print(f"Total Employees Processed: {num_employees}")
+print(f"Total Absentees: {len(absentees)} - {', '.join(absentees)}")
+print(f"Total Salary Paid Today: ₹{total_paid:.2f}")
+
